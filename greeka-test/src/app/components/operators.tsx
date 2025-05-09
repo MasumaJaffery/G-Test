@@ -9,6 +9,7 @@ import {
   FiGlobe,
 } from "react-icons/fi";
 
+
 export default function FerryOperators() {
   const [showFilters, setShowFilters] = useState(false); // Start hidden by default
   const [isDesktop, setIsDesktop] = useState(false);
@@ -54,7 +55,7 @@ export default function FerryOperators() {
     },
     {
       name: "Anek-Superfast",
-      logo: "/anek-superfast-logo.png",
+      logo: '',
       customers: 667,
       operates: "Greece, Italy",
       vessels: 6,
@@ -106,7 +107,7 @@ export default function FerryOperators() {
   </div>
 
   {/* Search Box (Hidden on mobile) */}
-  <div className="flex items-center border rounded-md px-2 w-1/4 hidden sm:flex  ">
+  <div className="flex items-center border rounded-md px-2 w-1/6 hidden sm:flex  ">
     <FiSearch className="text-gray-500" />
     <input
       type="text"
