@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import img from './imgs/support.png';
 
 export default function CustomerSupport() {
   return (
@@ -12,11 +13,11 @@ export default function CustomerSupport() {
         <span className="text-yellow-500">★★★★★</span> by our customers
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center">
         {/* Left Image Section */}
-        <div className="flex justify-center md:justify-start">
+        <div className="flex justify-center md:justify-end">
           <Image
-            src=''
+            src={img}
             alt="Customer Support Graphic"
             width={400}
             height={300}
@@ -25,7 +26,7 @@ export default function CustomerSupport() {
         </div>
 
         {/* Right Contact Info Section */}
-        <div className="space-y-8">
+        <div className="space-y-6 md:space-y-8">
           <div className="flex items-start gap-4">
             <div className="text-2xl">📞</div>
             <div>

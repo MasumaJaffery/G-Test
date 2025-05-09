@@ -8,6 +8,9 @@ import {
   FiArrowRight,
   FiGlobe,
 } from "react-icons/fi";
+import Logo1 from '../components/imgs/bs.jpeg';
+import Logo2 from '../components/imgs/sj.png';
+import Logo3 from '../components/imgs/as.jpeg';
 
 
 export default function FerryOperators() {
@@ -29,7 +32,7 @@ export default function FerryOperators() {
   const operators = [
     {
       name: "Blue Star Ferries",
-      logo: "/blue-star-ferries-logo.png",
+      logo: Logo1,
       customers: 1342,
       operates: "Greece",
       vessels: 8,
@@ -41,7 +44,7 @@ export default function FerryOperators() {
     },
     {
       name: "Seajets",
-      logo: "/seajets-logo.png",
+      logo: Logo2,
       customers: 2467,
       operates: "Greece",
       vessels: 17,
@@ -55,7 +58,7 @@ export default function FerryOperators() {
     },
     {
       name: "Anek-Superfast",
-      logo: '',
+      logo: Logo3,
       customers: 667,
       operates: "Greece, Italy",
       vessels: 6,
@@ -202,9 +205,9 @@ export default function FerryOperators() {
   {operators.map((op, i) => (
     <div key={i} className="p-4 bg-white border border-gray-200 rounded-md flex flex-col md:flex-row md:justify-between">
       <div className="flex flex-col w-full">
-        <div className="flex justify-between items-center bg-gray-100 p-2 rounded-t-md">
-          <Image src={op.logo} alt={op.name} width={60} height={60} />
-          <div className="text-right ml-4">
+        <div className="flex flex-col sm:flex-row justify-between items-center bg-gray-100 p-2 rounded-t-md">
+          <Image src={op.logo} alt={op.name} width={260} height={360} />
+          <div className="text-right sm:text-left ml-4">
             <h3 className="text-lg font-semibold text-black">{op.name}</h3>
             <div className="flex items-center justify-end text-yellow-400 text-sm">
               ★★★★☆
