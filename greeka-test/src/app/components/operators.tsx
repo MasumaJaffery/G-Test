@@ -208,11 +208,11 @@ export default function FerryOperators() {
         <div className="flex flex-col sm:flex-row justify-between items-center bg-gray-100 p-2 rounded-t-md">
           <Image src={op.logo} alt={op.name} width={260} height={360} />
           <div className="text-right sm:text-left ml-4">
-            <h3 className="text-lg font-semibold text-black">{op.name}</h3>
+            <h3 className="text-lg font-semibold text-end text-black">{op.name}</h3>
             <div className="flex items-center justify-end text-yellow-400 text-sm">
               ★★★★☆
             </div>
-            <p className="text-xs text-gray-500">by {op.customers.toLocaleString()} customers</p>
+            <p className="text-xs text-gray-500 text-end">by {op.customers.toLocaleString()} customers</p>
           </div>
         </div>
         <div className="mt-2 flex flex-col md:flex-row">
@@ -226,7 +226,7 @@ export default function FerryOperators() {
     {op.additionalInfo}
   </p>
 </div>
-<a href="#" className="text-cyan-600 text-sm font-medium mt-1 inline-block text-right">{op.linkText}</a>
+<a href="#" className="text-cyan-600 text-sm font-medium mt-1 inline-block text-right">{op.linkText} →</a>
       </div>
     </div>
   ))}

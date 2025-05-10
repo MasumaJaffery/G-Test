@@ -1,1 +1,5 @@
 https://github.com/MasumaJaffery/G-Test
+clone,
+cd greeka-test
+run => in terminal
+npm run dev
