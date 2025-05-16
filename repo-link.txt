@@ -1,0 +1,6 @@
+live link: https://greeka-test-y9zr.vercel.app/
+repo link: https://github.com/MasumaJaffery/G-Test
+clone repo: https://github.com/MasumaJaffery/G-Test
+run in terminal;
+npm install
+npm run build
