@@ -11,6 +11,8 @@ import {
 import Logo1 from '../components/imgs/bs.jpeg';
 import Logo2 from '../components/imgs/sj.png';
 import Logo3 from '../components/imgs/as.jpeg';
+import GreeceFlag from '../components/imgs/Flag_of_Greece.png';
+import ItalyFlag from '../components/imgs/Flag_of_Italy.png';
 
 
 export default function FerryOperators() {
@@ -39,7 +41,7 @@ export default function FerryOperators() {
       ferryTypes: "8 normal",
       popularVessels: ["Blue Star Delos", "Blue Star Naxos"],
       description: "Blue Star Ferries is currently the biggest ferry company in Greece...",
-      linkText: "More about Blue Star Ferries",
+      linkText: "About Blue Star Ferries",
       additionalInfo: "Blue Star Ferries is currently the biggest ferry company in Greece. It is a member of Attica Group, one of the most significant companies in the Greek shipping industry. Its fleet consists of vessels of the latest technology and services interlinking the port of Piraeus and heading to the islands of Cyclades (Mykonos, Santorini, Paros etc.) Dodecanese (Rhodes, Kos etc.). Blue Star Ferries serves over 50 destinations in total."
     },
     {
@@ -51,7 +53,7 @@ export default function FerryOperators() {
       ferryTypes: "10 normal and 7 high-speed ferries",
       popularVessels: ["WorldChampion jet", "Seajet 2"],
       description: "Seajets is the biggest company of high-speed vessels of the Aegean Sea...",
-      linkText: "More about Seajets",
+      linkText: "About Seajets",
       additionalInfo: "Seajets is currently the biggest ferry company in Greece. It is a member of Attica Group, one of the most significant companies in the Greek shipping industry. Its fleet consists of vessels of the latest technology and services interlinking the port of Piraeus and heading to the islands of Cyclades (Mykonos, Santorini, Paros etc.) Dodecanese (Rhodes, Kos etc.). Blue Star Ferries serves over 50 destinations in total."
 
 
@@ -65,7 +67,7 @@ export default function FerryOperators() {
       ferryTypes: "Normal ferries",
       popularVessels: ["Superfast XII", "Superfast XI"],
       description: "Anek-Superfast is a joint venture established in June 2011...",
-      linkText: "More about Anek - Superfast",
+      linkText: "About Anek - Superfast",
       additionalInfo: "Anek Superfast is currently the biggest ferry company in Greece. It is a member of Attica Group, one of the most significant companies in the Greek shipping industry. Its fleet consists of vessels of the latest technology and services interlinking the port of Piraeus and heading to the islands of Cyclades (Mykonos, Santorini, Paros etc.) Dodecanese (Rhodes, Kos etc.). Blue Star Ferries serves over 50 destinations in total."
 
     }
@@ -90,35 +92,35 @@ export default function FerryOperators() {
             </div>
 
             {/* Controls: Filter, Sort, Search */}
-<div className="flex gap-2">
-  <div className="flex gap-2">
-    {/* Filters Button */}
-    <button
-      onClick={() => setShowFilters(!showFilters)}
-      className="flex items-center border px-4 py-2 rounded-md text-sm w-full sm:w-auto hover:bg-gray-50"
-    >
-      <FiFilter className="mr-2" /> Filters
-    </button>
+            <div className="flex gap-2">
+              <div className="flex gap-2">
+                {/* Filters Button */}
+                <button
+                  onClick={() => setShowFilters(!showFilters)}
+                  className="flex items-center border px-4 py-2 rounded-md text-sm w-full sm:w-auto hover:bg-gray-50"
+                >
+                  <FiFilter className="mr-2" /> Filters
+                </button>
 
-    {/* Sort Dropdown */}
-    <div className="relative w-full sm:w-auto">
-      <select className="appearance-none border px-4 py-2 rounded-md text-sm w-full sm:w-auto pr-8">
-        <option>Sort by: Reviews number (high first)</option>
-      </select>
-      <FiChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none text-gray-500" />
-    </div>
-  </div>
+                {/* Sort Dropdown */}
+                <div className="relative w-full sm:w-auto">
+                  <select className="appearance-none border px-4 py-2 rounded-md text-sm w-full sm:w-auto pr-8">
+                    <option>Sort by: Reviews number (high first)</option>
+                  </select>
+                  <FiChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none text-gray-500" />
+                </div>
+              </div>
 
-  {/* Search Box (Hidden on mobile) */}
-  <div className="flex items-center border rounded-md px-2 w-1/6 hidden sm:flex  ">
-    <FiSearch className="text-gray-500" />
-    <input
-      type="text"
-      placeholder="Search"
-      className="outline-none p-1 text-sm ml-2 w-full sm:w-32"
-    />
-  </div>
-</div>
+              {/* Search Box (Hidden on mobile) */}
+              <div className="flex items-center border rounded-md px-2 w-1/6 hidden sm:flex  ">
+                <FiSearch className="text-gray-500" />
+                <input
+                  type="text"
+                  placeholder="Search"
+                  className="outline-none p-1 text-sm ml-2 w-full sm:w-32"
+                />
+              </div>
+            </div>
 
 
             {/* Mobile Filter Panel */}
@@ -200,37 +202,69 @@ export default function FerryOperators() {
               </div>
             )}
           </div>
-   {/* Operators List */}
-<div className="w-full sm:w-1/2 lg:w-3/4 flex flex-col gap-4">
-  {operators.map((op, i) => (
-    <div key={i} className="p-4 bg-white border border-gray-200 rounded-md flex flex-col md:flex-row md:justify-between">
-      <div className="flex flex-col w-full">
-        <div className="flex flex-col sm:flex-row justify-between items-center bg-gray-100 p-2 rounded-t-md">
-          <Image src={op.logo} alt={op.name} width={260} height={360} />
-          <div className="text-right sm:text-left ml-4">
-            <h3 className="text-lg font-semibold text-end text-black">{op.name}</h3>
-            <div className="flex items-center justify-end text-yellow-400 text-sm">
-              ★★★★☆
-            </div>
-            <p className="text-xs text-gray-500 text-end">by {op.customers.toLocaleString()} customers</p>
+          {/* Operators List */}
+          <div className="w-full lg:w-3/4 flex flex-col gap-4">
+            {operators.map((op, i) => (
+              <div key={i} className="p-4 bg-white border border-gray-200 rounded-md flex flex-col md:flex-row md:justify-between">
+                <div className="flex flex-col w-full">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-gray-100 p-2 rounded-t-md">
+                    <Image src={op.logo} alt={op.name} width={260} height={360} />
+                    <div className="text-right sm:text-left">
+                      <h3 className="text-lg font-semibold text-left sm:text-end text-black">{op.name}</h3>
+                      <div className="flex items-center justify-end gap-1 text-yellow-400 text-sm">
+                        ★★★★☆
+                        <p className="text-xs text-gray-500 text-end">by {op.customers.toLocaleString()} customers</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-2 flex flex-col md:flex-row">
+                    <div className="mt-1 text-sm text-gray-700 flex-1">
+                      <div className="flex flex-col">
+                        <p className="mb-1"><strong>Operates in</strong></p>
+                        <div className="flex gap-2 items-center mb-3">
+                          {i === 2 ? (
+                            <>
+                              <div className="flex items-center gap-1">
+                                <Image src={GreeceFlag} alt="Greece flag" width={30} height={20} />
+                                <p>Greece</p>
+                              </div>
+                              <div className="flex items-center gap-1">
+                                <Image src={ItalyFlag} alt="Italy flag" width={30} height={20} />
+                                <p>Italy</p>
+                              </div>
+                            </>
+                          ) : (
+                            <div className="flex items-center gap-1">
+                              <Image src={GreeceFlag} alt="Greece flag" width={30} height={20} />
+                              <p>{op.operates}</p>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                      <div className="mb-4">
+                      <p><strong>Vessels number:</strong> {op.vessels}</p>
+                      <p><strong>Ferry types:</strong> {op.ferryTypes}</p>
+                      </div>
+                      <div className="flex flex-col gap-1">
+                        <strong>Popular vessels:</strong>
+                        <p className="text-blue-500">{op.popularVessels.join(", ")}</p>
+                      </div>
+                    </div>
+                    <p className="text-sm text-gray-700 mt-2 md:mt-0 md:ml-4 flex-1 mt-2 pt-1">
+                      {op.additionalInfo}
+                    </p>
+                  </div>
+                  <hr className="my-2 border-t border-gray-300" />
+                  <div className="flex gap-1 justify-end items-center">
+                  <a href="#" className="text-cyan-600 text-md font-medium mt-1 inline-block text-right font-semibold	">{op.linkText}</a>
+                  <button className="text-sm font-medium mt-1 ml-2 inline-block text-right bg-cyan-600 rounded-full px-2 py-1 text-white">
+                      <FiArrowRight className="inline-block text-white" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-        </div>
-        <div className="mt-2 flex flex-col md:flex-row">
-  <div className="mt-1 text-sm text-gray-700 flex-1">
-    <p><strong>Operates in:</strong> {op.operates}</p>
-    <p><strong>Vessels number:</strong> {op.vessels}</p>
-    <p><strong>Ferry types:</strong> {op.ferryTypes}</p>
-    <p><strong>Popular vessels:</strong> {op.popularVessels.join(", ")}</p>
-  </div>
-  <p className="text-sm text-gray-700 mt-2 md:mt-0 md:ml-4 flex-1">
-    {op.additionalInfo}
-  </p>
-</div>
-<a href="#" className="text-cyan-600 text-sm font-medium mt-1 inline-block text-right">{op.linkText} →</a>
-      </div>
-    </div>
-  ))}
-</div>
         </div>
       </main>
     </div>
